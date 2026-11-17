@@ -15,7 +15,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenSizeGuid
   };
 
   return (
-    <footer className="bg-[#06231B] text-[#E3DDD0] border-t border-[#C59B43]/35">
+    <footer className="w-full overflow-x-clip bg-[#06231B] text-[#E3DDD0] border-t border-[#C59B43]/35">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Story */}

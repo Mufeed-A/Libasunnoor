@@ -50,13 +50,13 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 shadow-sm">
+    <header className="sticky top-0 z-40 w-full max-w-full overflow-x-clip shadow-sm">
       {/* Top Heritage Announcement Bar */}
-      <div className="bg-[#07261D] text-[#EFE6D2] border-b border-[#C59B43]/30 text-xs py-2 px-4">
+      <div className="bg-[#07261D] text-[#EFE6D2] border-b border-[#C59B43]/30 text-[11px] sm:text-xs py-2 px-3 sm:px-4">
         <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 min-w-0">
             <Sparkles className="w-3.5 h-3.5 text-[#DFC079] shrink-0" />
-            <span>
+            <span className="truncate sm:whitespace-normal">
               Complimentary Pan-India Shipping on orders above ₹2,499 • Express Nikah &amp; Jummah Dispatch
             </span>
           </div>
@@ -85,12 +85,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Main Navigation Bar */}
       <div className="bg-[#FBF8F1]/95 backdrop-blur-md border-b border-[#E4D8C2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20 gap-4">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-20 gap-2 sm:gap-4 min-w-0">
             {/* Mobile Hamburger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-[#0B3B2E] hover:bg-[#EFE6D4] transition"
+              className="lg:hidden p-1.5 sm:p-2 rounded-lg text-[#0B3B2E] hover:bg-[#EFE6D4] transition shrink-0"
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -99,10 +99,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Brand Crest & Wordmark */}
             <a
               href="#top"
-              className="flex items-center gap-3 group shrink-0"
+              className="flex items-center gap-2 sm:gap-3 group min-w-0 shrink"
             >
-              <div className="w-11 h-11 rounded-xl bg-[#0B3B2E] border border-[#C59B43]/60 flex items-center justify-center shadow-sm group-hover:bg-[#0F4D3C] transition">
-                <svg className="w-7 h-7" viewBox="0 0 48 48" fill="none">
+              <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-[#0B3B2E] border border-[#C59B43]/60 flex items-center justify-center shadow-sm group-hover:bg-[#0F4D3C] transition shrink-0">
+                <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 48 48" fill="none">
                   <path
                     d="M24 4L29.5 9.5H37.5V17.5L43 23L37.5 28.5V36.5H29.5L24 42L18.5 36.5H10.5V28.5L5 23L10.5 17.5V9.5H18.5L24 4Z"
                     stroke="#DFC079"
@@ -118,16 +118,16 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <circle cx="28" cy="18.5" r="2.2" fill="#DFC079" />
                 </svg>
               </div>
-              <div>
-                <div className="flex items-baseline gap-2">
-                  <span className="font-serif-heritage text-xl sm:text-2xl font-bold tracking-tight text-[#082E23]">
+              <div className="min-w-0">
+                <div className="flex items-baseline gap-1.5 sm:gap-2">
+                  <span className="font-serif-heritage text-base sm:text-2xl font-bold tracking-tight text-[#082E23] truncate">
                     LIBASUNNOOR
                   </span>
                   <span className="hidden sm:inline text-sm text-[#9B7424] font-medium">
                     لباس النور
                   </span>
                 </div>
-                <p className="text-[10px] sm:text-[11px] uppercase tracking-[0.2em] text-[#5B645D]">
+                <p className="hidden xs:block sm:block text-[9px] sm:text-[11px] uppercase tracking-[0.16em] sm:tracking-[0.2em] text-[#5B645D] truncate">
                   Heritage Thobes &amp; Attire
                 </p>
               </div>
@@ -194,7 +194,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </nav>
 
             {/* Right Utility Controls */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-1 sm:gap-3 shrink-0">
               {/* Currency Selector */}
               <select
                 aria-label="Select Currency"
@@ -210,7 +210,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Search Toggle */}
               <button
                 onClick={() => setSearchOpen(!searchOpen)}
-                className="p-2.5 rounded-full text-[#0B3B2E] hover:bg-[#EFE6D4] transition cursor-pointer"
+                className="p-2 sm:p-2.5 rounded-full text-[#0B3B2E] hover:bg-[#EFE6D4] transition cursor-pointer"
                 aria-label="Search catalog"
               >
                 <Search className="w-5 h-5" />
@@ -219,7 +219,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Wishlist */}
               <button
                 onClick={onOpenWishlist}
-                className="relative p-2.5 rounded-full text-[#0B3B2E] hover:bg-[#EFE6D4] transition cursor-pointer"
+                className="relative p-2 sm:p-2.5 rounded-full text-[#0B3B2E] hover:bg-[#EFE6D4] transition cursor-pointer"
                 aria-label="Saved items"
               >
                 <Heart className="w-5 h-5" />
@@ -233,11 +233,11 @@ export const Navbar: React.FC<NavbarProps> = ({
               {/* Cart Drawer Trigger */}
               <button
                 onClick={onOpenCart}
-                className="inline-flex items-center gap-2 bg-[#0B3B2E] hover:bg-[#125240] text-[#FBF8F1] px-3.5 sm:px-4 py-2.5 rounded-full text-sm font-medium shadow-sm transition cursor-pointer"
+                className="inline-flex items-center gap-1.5 sm:gap-2 bg-[#0B3B2E] hover:bg-[#125240] text-[#FBF8F1] px-2.5 sm:px-4 py-2 sm:py-2.5 rounded-full text-sm font-medium shadow-sm transition cursor-pointer"
               >
                 <ShoppingBag className="w-4 h-4 text-[#DFC079]" />
                 <span className="hidden sm:inline">Bag</span>
-                <span className="bg-[#DFC079] text-[#082E23] text-xs font-bold px-2 py-0.5 rounded-full">
+                <span className="bg-[#DFC079] text-[#082E23] text-xs font-bold px-1.5 sm:px-2 py-0.5 rounded-full">
                   {cartCount}
                 </span>
               </button>

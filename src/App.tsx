@@ -186,7 +186,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FBF8F1] text-[#16221D]">
+    <div className="min-h-screen w-full max-w-full overflow-x-clip flex flex-col bg-[#FBF8F1] text-[#16221D]">
       <Navbar
         cartCount={totalBagCount}
         wishlistCount={wishlistIds.length}
@@ -201,7 +201,7 @@ export function App() {
         onSearchChange={setSearchQuery}
       />
 
-      <main className="flex-1">
+      <main className="flex-1 w-full max-w-full overflow-x-clip">
         {/* Hero Banner */}
         <Hero
           onExploreCollection={scrollToCollection}
@@ -340,7 +340,7 @@ export function App() {
             </div>
 
             {/* Horizontal Category Filter Chips */}
-            <div className="flex items-center gap-2 overflow-x-auto pb-2">
+            <div className="flex items-center gap-2 overflow-x-auto max-w-full pb-2 -mx-1 px-1">
               {CATEGORIES.map((cat) => (
                 <button
                   key={cat.id}

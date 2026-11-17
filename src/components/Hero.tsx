@@ -14,12 +14,12 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCollection, onOpenSizeGuide
       <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#C59B43] to-transparent opacity-60" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+        {/* Left Editorial Copy */}
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Editorial Copy */}
-          <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#0F4636]/90 border border-[#C59B43]/40 text-xs uppercase tracking-[0.2em] text-[#DFC079]">
-              <span className="w-2 h-2 rounded-full bg-[#DFC079] animate-pulse" />
-              <span>Jummah, Nikah &amp; Eid 2026 Collection</span>
+          <div className="lg:col-span-6 space-y-6 min-w-0">
+            <div className="inline-flex max-w-full items-center gap-2 px-3 py-1.5 rounded-full bg-[#0F4636]/90 border border-[#C59B43]/40 text-[10px] sm:text-xs uppercase tracking-[0.14em] sm:tracking-[0.2em] text-[#DFC079]">
+              <span className="w-2 h-2 rounded-full bg-[#DFC079] animate-pulse shrink-0" />
+              <span className="truncate">Jummah, Nikah &amp; Eid 2026 Collection</span>
             </div>
 
             <div className="space-y-3">
@@ -78,10 +78,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCollection, onOpenSizeGuide
           </div>
 
           {/* Right Archway Framed Campaign Image */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative mx-auto max-w-xl">
+          <div className="lg:col-span-6 relative min-w-0">
+            <div className="relative mx-auto max-w-xl px-1 sm:px-0">
               {/* Subtle Gold Offset Arch Frame */}
-              <div className="absolute -inset-2.5 rounded-t-[140px] rounded-b-3xl border border-[#C59B43]/40 pointer-events-none" />
+              <div className="hidden sm:block absolute -inset-2.5 rounded-t-[140px] rounded-b-3xl border border-[#C59B43]/40 pointer-events-none" />
 
               <div className="relative rounded-t-[132px] rounded-b-2xl overflow-hidden shadow-2xl border-2 border-[#C59B43]/60 bg-[#13382C]">
                 <img
@@ -116,7 +116,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCollection, onOpenSizeGuide
 
       {/* Heritage Value Strip */}
       <div className="border-t border-[#C59B43]/25 bg-[#06231B]/90">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-2 lg:grid-cols-4 gap-4 text-xs sm:text-sm text-[#E5DEC9]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 text-xs sm:text-sm text-[#E5DEC9]">
           <div className="flex items-center gap-3">
             <Award className="w-5 h-5 text-[#DFC079] shrink-0" />
             <div>

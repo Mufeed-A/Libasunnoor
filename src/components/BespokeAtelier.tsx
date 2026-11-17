@@ -17,11 +17,11 @@ export const BespokeAtelier: React.FC = () => {
   const whatsappUrl = buildBespokeWhatsAppUrl(form, STORE_CONFIG.whatsappNumber);
 
   return (
-    <section id="atelier" className="py-16 sm:py-24 bg-[#F3EBDC] border-y border-[#E0D2B8] bg-islamic-pattern">
+    <section id="atelier" className="py-16 sm:py-24 w-full overflow-x-clip bg-[#F3EBDC] border-y border-[#E0D2B8] bg-islamic-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Atelier Visual & Heritage Story */}
-          <div className="lg:col-span-6 space-y-6">
+          <div className="lg:col-span-6 space-y-6 min-w-0">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#082E23] text-[#DFC079] text-xs font-semibold uppercase tracking-widest">
               <Scissors className="w-3.5 h-3.5" />
               <span>The Libasunnoor Bespoke Atelier</span>
@@ -62,8 +62,8 @@ export const BespokeAtelier: React.FC = () => {
           </div>
 
           {/* Right Custom Measurement Request Card */}
-          <div className="lg:col-span-6">
-            <div className="bg-[#FBF8F1] rounded-3xl border border-[#D8C7A6] shadow-xl p-6 sm:p-8 space-y-5">
+          <div className="lg:col-span-6 min-w-0">
+            <div className="bg-[#FBF8F1] rounded-3xl border border-[#D8C7A6] shadow-xl p-5 sm:p-8 space-y-5">
               <div className="border-b border-[#E4D8C2] pb-4">
                 <span className="text-xs font-semibold uppercase tracking-widest text-[#9C782B]">
                   Direct Master Tailor Consultation
@@ -123,7 +123,7 @@ export const BespokeAtelier: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div>
                     <label className="block text-xs font-semibold text-[#1F312B] mb-1">
                       Length (in)
