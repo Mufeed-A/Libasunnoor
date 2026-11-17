@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Clock, MessageCircle, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Instagram } from 'lucide-react';
 import { CategoryId, CATEGORIES, STORE_CONFIG } from '../data/products';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface FooterProps {
   onSelectCategory: (cat: CategoryId) => void;
@@ -41,9 +42,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory, onOpenSizeGuid
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-[#1DA851] hover:bg-[#179145] text-white text-xs font-semibold transition"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1DA851] hover:bg-[#179145] text-white text-xs font-semibold transition"
               >
-                <MessageCircle className="w-3.5 h-3.5" />
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
                 <span>WhatsApp Concierge</span>
               </a>
               <a

@@ -4,7 +4,6 @@ import {
   Star,
   Check,
   ShoppingBag,
-  MessageCircle,
   Ruler,
   Sparkles,
   ShieldCheck,
@@ -13,6 +12,7 @@ import {
 } from 'lucide-react';
 import { Product, STORE_CONFIG } from '../data/products';
 import { CurrencyCode, formatPrice, buildSingleProductWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface ProductModalProps {
   product: Product | null;
@@ -267,7 +267,7 @@ export const ProductModal: React.FC<ProductModalProps> = ({
               rel="noopener noreferrer"
               className="w-full inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl bg-[#1DA851] hover:bg-[#189346] text-white text-sm font-semibold shadow-sm transition"
             >
-              <MessageCircle className="w-4 h-4" />
+              <WhatsAppIcon className="w-5 h-5 shrink-0" />
               <span>Order Directly on WhatsApp Now</span>
             </a>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { ArrowRight, Ruler, ShieldCheck, MessageCircle, Award, Truck } from 'lucide-react';
+import { ArrowRight, Ruler, ShieldCheck, Award, Truck } from 'lucide-react';
 import { STORE_CONFIG } from '../data/products';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface HeroProps {
   onExploreCollection: () => void;
@@ -59,7 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCollection, onOpenSizeGuide
 
             {/* Direct WhatsApp Concierge Note */}
             <div className="pt-2 flex items-center gap-3 text-xs sm:text-sm text-[#C8D6CF]">
-              <MessageCircle className="w-4 h-4 text-[#25D366] shrink-0" />
+              <WhatsAppIcon className="w-5 h-5 text-[#25D366] shrink-0" />
               <span>
                 Select your size, add to bag, and place your complete order on{' '}
                 <a
@@ -132,7 +133,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreCollection, onOpenSizeGuide
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <MessageCircle className="w-5 h-5 text-[#DFC079] shrink-0" />
+            <WhatsAppIcon className="w-5 h-5 text-[#DFC079] shrink-0" />
             <div>
               <p className="font-semibold text-white">Instant WhatsApp Checkout</p>
               <p className="text-xs text-[#B7C7BF]">Personal verification before dispatch</p>

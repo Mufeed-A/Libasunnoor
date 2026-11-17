@@ -5,7 +5,6 @@ import {
   Plus,
   Minus,
   ShoppingBag,
-  MessageCircle,
   Copy,
   Check,
   Truck,
@@ -19,6 +18,7 @@ import {
   formatPrice,
   buildCartWhatsAppUrl,
 } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface CartDrawerProps {
   isOpen: boolean;
@@ -395,7 +395,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   onClick={() => setStep('checkout')}
                   className="w-full py-3.5 px-5 rounded-xl bg-[#0B3B2E] hover:bg-[#125240] text-[#FBF8F1] text-sm font-semibold flex items-center justify-center gap-2 shadow-sm transition cursor-pointer"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#DFC079]" />
+                  <WhatsAppIcon className="w-5 h-5 text-[#DFC079] shrink-0" />
                   <span>Proceed to WhatsApp Checkout</span>
                 </button>
                 <a
@@ -404,6 +404,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   rel="noopener noreferrer"
                   className="w-full py-2.5 px-4 rounded-xl bg-[#E8F8EE] hover:bg-[#D7F2E2] text-[#0E5C33] text-xs font-semibold flex items-center justify-center gap-1.5 transition"
                 >
+                  <WhatsAppIcon className="w-4 h-4 text-[#1DA851] shrink-0" />
                   <span>Quick Send to WhatsApp Without Address</span>
                 </a>
               </div>
@@ -415,7 +416,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                   rel="noopener noreferrer"
                   className="w-full py-3.5 px-5 rounded-xl bg-[#1DA851] hover:bg-[#179145] text-white text-sm font-semibold flex items-center justify-center gap-2 shadow-md transition"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <WhatsAppIcon className="w-5 h-5 shrink-0" />
                   <span>Place Order via WhatsApp</span>
                 </a>
 

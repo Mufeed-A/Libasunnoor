@@ -2,7 +2,6 @@ import { useState, useEffect, useMemo } from 'react';
 import {
   SlidersHorizontal,
   Star,
-  MessageCircle,
   ShoppingBag,
   CheckCircle,
   Sparkles,
@@ -27,6 +26,7 @@ import { SizeGuideModal } from './components/SizeGuideModal';
 import { BespokeAtelier } from './components/BespokeAtelier';
 import { WishlistModal } from './components/WishlistModal';
 import { Footer } from './components/Footer';
+import { WhatsAppIcon } from './components/WhatsAppIcon';
 
 const CART_STORAGE_KEY = 'libasunnoor_cart_v1';
 const WISHLIST_STORAGE_KEY = 'libasunnoor_wishlist_v1';
@@ -519,10 +519,11 @@ export function App() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat on WhatsApp"
-          className="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-[#1DA851] hover:bg-[#169144] text-white shadow-xl text-xs font-semibold transition"
+          title="Chat on WhatsApp"
+          className="inline-flex items-center justify-center gap-2.5 w-14 h-14 sm:w-auto sm:h-auto sm:px-5 sm:py-3.5 rounded-full bg-[#25D366] hover:bg-[#1EBE5D] text-white shadow-xl shadow-black/20 ring-2 ring-white/80 text-sm font-semibold transition transform hover:scale-105"
         >
-          <MessageCircle className="w-4 h-4" />
-          <span className="hidden sm:inline">Chat on WhatsApp</span>
+          <WhatsAppIcon className="w-7 h-7 sm:w-6 sm:h-6 shrink-0" />
+          <span className="hidden sm:inline">WhatsApp</span>
         </a>
       </div>
 

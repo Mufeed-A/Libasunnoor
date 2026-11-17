@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Scissors, MessageCircle, CheckCircle2 } from 'lucide-react';
+import { Scissors, CheckCircle2 } from 'lucide-react';
 import { STORE_CONFIG } from '../data/products';
 import { buildBespokeWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 export const BespokeAtelier: React.FC = () => {
   const [form, setForm] = useState({
@@ -181,7 +182,7 @@ export const BespokeAtelier: React.FC = () => {
                   rel="noopener noreferrer"
                   className="w-full py-3.5 px-6 rounded-xl bg-[#0B3B2E] hover:bg-[#135340] text-[#FBF8F1] font-semibold text-sm flex items-center justify-center gap-2 shadow-md transition"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#DFC079]" />
+                  <WhatsAppIcon className="w-5 h-5 text-[#DFC079] shrink-0" />
                   <span>Request Bespoke Quote on WhatsApp</span>
                 </a>
               </div>

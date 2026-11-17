@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { X, Ruler, Sparkles, MessageCircle } from 'lucide-react';
+import { X, Ruler, Sparkles } from 'lucide-react';
 import { THOBE_SIZE_CHART, STORE_CONFIG } from '../data/products';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface SizeGuideModalProps {
   isOpen: boolean;
@@ -130,7 +131,7 @@ export const SizeGuideModal: React.FC<SizeGuideModalProps> = ({ isOpen, onClose 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#DFC079] text-[#082E23] text-xs font-semibold hover:bg-[#EAD093] transition"
               >
-                <MessageCircle className="w-3.5 h-3.5" />
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
                 <span>Verify with Tailor</span>
               </a>
             </div>

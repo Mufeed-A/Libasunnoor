@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Heart, ShoppingBag, MessageCircle, Star, Eye, Check } from 'lucide-react';
+import { Heart, ShoppingBag, Star, Eye, Check } from 'lucide-react';
 import { Product, STORE_CONFIG } from '../data/products';
 import { CurrencyCode, formatPrice, buildSingleProductWhatsAppUrl } from '../utils/whatsapp';
+import { WhatsAppIcon } from './WhatsAppIcon';
 
 interface ProductCardProps {
   product: Product;
@@ -236,7 +237,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
                 title="Instant Order on WhatsApp"
                 className="col-span-2 inline-flex items-center justify-center gap-1.5 py-2.5 px-2.5 rounded-xl text-xs font-semibold bg-[#E8F8EE] hover:bg-[#D5F3E0] text-[#0F5C33] border border-[#A8E0BE] transition"
               >
-                <MessageCircle className="w-3.5 h-3.5 text-[#1DA851]" />
+                <WhatsAppIcon className="w-4 h-4 text-[#1DA851] shrink-0" />
                 <span>WhatsApp</span>
               </a>
             </div>
